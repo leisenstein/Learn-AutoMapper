@@ -33,15 +33,8 @@ namespace LearnAutoMapper.Controllers
                 Price = 4.99m
             };
             order.AddOrderLineItem(bosco, 15);
-
             
-
             OrderDto dto = Mapper.Map<Order, OrderDto>(order);
-
-            //dto.CustomerName.ShouldEqual("George Costanza");
-            //dto.Total.ShouldEqual(74.85m);
-
-
             return "GOOD!";
         }
     }
