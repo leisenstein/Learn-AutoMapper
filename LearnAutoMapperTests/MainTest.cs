@@ -12,7 +12,7 @@ namespace LearnAutoMapperTests
     public class MainTest
     {
         [TestMethod]
-        public void FlatteningTest()
+        public void Flattening_Test()
         {
             /*
              * When you configure a source/destination type pair in AutoMapper, the configurator attempts to match properties and methods on the source type 
@@ -47,7 +47,7 @@ namespace LearnAutoMapperTests
 
 
         [TestMethod]
-        public void ProjectionTest()
+        public void Projection_Test()
         {
             /*
              * Projection transforms a source to a destination beyond flattening the object model. 
@@ -63,7 +63,7 @@ namespace LearnAutoMapperTests
 
 
 
-            // Configure AutoMapper
+            // ForMember( PARAMETER , OPERATION )
             Mapper.CreateMap<CalendarEvent, CalendarEventForm>()
                 .ForMember(dest => dest.EventDate, opt => opt.MapFrom(src => src.Date.Date))
                 .ForMember(dest => dest.EventHour, opt => opt.MapFrom(src => src.Date.Hour))
@@ -80,7 +80,7 @@ namespace LearnAutoMapperTests
 
 
         [TestMethod]
-        public void ListAndArrayTest()
+        public void ListAndArray_Test()
         {
             /*
              * AutoMapper only requires configuration of element types, not of any array or list type that might be used.
@@ -111,7 +111,7 @@ namespace LearnAutoMapperTests
 
 
         [TestMethod]
-        public void NestedMapping()
+        public void Nested_Mapping()
         {
             /* 
              *  Nested objects can be mapped if the names/types match
@@ -138,7 +138,7 @@ namespace LearnAutoMapperTests
 
 
         [TestMethod]
-        public void CustomTypeConverterTest()
+        public void CustomTypeConverter_Test()
         {
             /*
              * Sometimes, you need to take complete control over the conversion of one type to another. 
@@ -166,7 +166,7 @@ namespace LearnAutoMapperTests
 
 
         [TestMethod]
-        public void NullSubstitutionTest()
+        public void NullSubstitution_Test()
         {
             /*
              * Null substitution allows you to supply an alternate value for a destination member if the source value is null anywhere along the member chain.
@@ -191,7 +191,7 @@ namespace LearnAutoMapperTests
 
 
         [TestMethod]
-        public void GenericMappingTest()
+        public void GenericsMapping_Test()
         {
             /*
              * AutoMapper can support an open generic type map. 
@@ -204,6 +204,26 @@ namespace LearnAutoMapperTests
 
             Assert.AreEqual(dest.Value, 10);
         }
+        
 
+        [TestMethod]
+        public void Destination_Map_Does_Not_Exist_Test()
+        {
+            /*
+             * This handles the case where the Destination target has a Property that is not available in the Source. 
+             * Just Ignore it.
+            */
+
+            // ForMember( PARAMETER , OPERATION )
+            Mapper.CreateMap<SourceWithOutProperty, DestinationWithProperty>().ForMember(m => m.Isbn, opt => opt.Ignore());
+            Mapper.AssertConfigurationIsValid();
+
+            var src = new SourceWithOutProperty { Title = "Cujo", Author = "Stephen King" };
+            var dto = Mapper.Map<SourceWithOutProperty, DestinationWithProperty>(src);
+
+            Assert.AreEqual(src.Author, dto.Author);
+            Assert.AreEqual(src.Title, dto.Title);
+            Assert.AreEqual(default(string), dto.Isbn);
+        }
     }
 }

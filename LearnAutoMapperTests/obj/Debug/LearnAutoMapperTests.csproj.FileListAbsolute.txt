@@ -20,3 +20,25 @@ C:\Users\Larry\documents\visual studio 2013\Projects\LearnAutoMapper\LearnAutoMa
 C:\Users\Larry\documents\visual studio 2013\Projects\LearnAutoMapper\LearnAutoMapperTests\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Larry\documents\visual studio 2013\Projects\LearnAutoMapper\LearnAutoMapperTests\obj\Debug\LearnAutoMapperTests.dll
 C:\Users\Larry\documents\visual studio 2013\Projects\LearnAutoMapper\LearnAutoMapperTests\obj\Debug\LearnAutoMapperTests.pdb
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\AutoMapper.Net4.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\LearnAutoMapperTests.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\LearnAutoMapperTests.pdb
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\AutoMapper.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\LearnAutoMapper.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\System.Web.Mvc.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\System.Web.Razor.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\System.Web.WebPages.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\LearnAutoMapper.pdb
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\AutoMapper.pdb
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\AutoMapper.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\AutoMapper.Net4.pdb
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\System.Web.Mvc.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\System.Web.Razor.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\System.Web.WebPages.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\obj\Debug\LearnAutoMapperTests.csprojResolveAssemblyReference.cache
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\obj\Debug\LearnAutoMapperTests.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapperTests\obj\Debug\LearnAutoMapperTests.pdb

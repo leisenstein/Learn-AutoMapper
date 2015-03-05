@@ -115,6 +115,7 @@
     <Compile Include="Models\CalendarEvent.cs" />
     <Compile Include="Models\CalendarEventForm.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DestinationWithProperty.cs" />
     <Compile Include="Models\GenericDestination.cs" />
     <Compile Include="Models\GenericSource.cs" />
     <Compile Include="Models\InnerDest.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Models\OuterDest.cs" />
     <Compile Include="Models\OuterSource.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\SourceWithOutProperty.cs" />
     <Compile Include="Models\TypeConverterDestination.cs" />
     <Compile Include="Models\TypeConverterSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

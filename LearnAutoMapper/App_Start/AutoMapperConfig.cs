@@ -41,7 +41,7 @@ namespace LearnAutoMapper.App_Start
 
             Mapper.CreateMap(typeof(GenericSource<>), typeof(GenericDestination<>));
 
-
+            Mapper.CreateMap<SourceWithOutProperty, DestinationWithProperty>().ForMember(m => m.Isbn, opt => opt.Ignore());
 
 
             Mapper.AssertConfigurationIsValid();

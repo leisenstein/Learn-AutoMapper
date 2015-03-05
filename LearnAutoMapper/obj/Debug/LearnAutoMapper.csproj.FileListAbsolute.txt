@@ -27,3 +27,32 @@ C:\Users\Larry\documents\visual studio 2013\Projects\LearnAutoMapper\LearnAutoMa
 C:\Users\Larry\documents\visual studio 2013\Projects\LearnAutoMapper\LearnAutoMapper\bin\System.Web.WebPages.Razor.xml
 C:\Users\Larry\documents\visual studio 2013\Projects\LearnAutoMapper\LearnAutoMapper\obj\Debug\LearnAutoMapper.dll
 C:\Users\Larry\documents\visual studio 2013\Projects\LearnAutoMapper\LearnAutoMapper\obj\Debug\LearnAutoMapper.pdb
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\AutoMapper.Net4.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\LearnAutoMapper.dll.config
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\LearnAutoMapper.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\LearnAutoMapper.pdb
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\AutoMapper.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\EntityFramework.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\EntityFramework.SqlServer.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\Newtonsoft.Json.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.Helpers.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.Mvc.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.Razor.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.WebPages.Deployment.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.WebPages.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.WebPages.Razor.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\AutoMapper.pdb
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\AutoMapper.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\AutoMapper.Net4.pdb
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\EntityFramework.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\EntityFramework.SqlServer.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\Newtonsoft.Json.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.Helpers.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.Mvc.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.Razor.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.WebPages.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.WebPages.Deployment.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\bin\System.Web.WebPages.Razor.xml
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\obj\Debug\LearnAutoMapper.csprojResolveAssemblyReference.cache
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\obj\Debug\LearnAutoMapper.dll
+C:\GitHub\Learn-AutoMapper\LearnAutoMapper\obj\Debug\LearnAutoMapper.pdb
