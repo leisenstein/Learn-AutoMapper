@@ -13,6 +13,7 @@ namespace LearnAutoMapper.App_Start
     {
         public static void RegisterMappings()
         {
+            // Register the mappings for the application
             AutoMapper.Mapper.CreateMap<Order, OrderDto>();
         }
 
