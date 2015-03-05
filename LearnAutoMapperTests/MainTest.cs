@@ -3,6 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using LearnAutoMapper;
 using LearnAutoMapper.Models;
 using AutoMapper;
+using System.Collections.Generic;
+using LearnAutoMapper.Services;
 
 namespace LearnAutoMapperTests
 {
@@ -75,5 +77,94 @@ namespace LearnAutoMapperTests
             Assert.AreEqual(form.EventMinute, 30);
             Assert.AreEqual(form.Title, "Company Holiday Party");
         }
+
+
+        [TestMethod]
+        public void ListAndArrayTest()
+        {
+            /*
+             * AutoMapper only requires configuration of element types, not of any array or list type that might be used.
+            */
+
+            Mapper.CreateMap<ListAndArraySource, ListAndArrayDestination>();
+
+            var sources = new[]
+            {
+                new ListAndArraySource { Value = 5 },
+                new ListAndArraySource { Value = 6 },
+                new ListAndArraySource { Value = 7 }
+            };
+
+            IEnumerable<ListAndArrayDestination> ienumerableDest = Mapper.Map<ListAndArraySource[], IEnumerable<ListAndArrayDestination>>(sources);
+            ICollection<ListAndArrayDestination> icollectionDest = Mapper.Map<ListAndArraySource[], ICollection<ListAndArrayDestination>>(sources);
+            IList<ListAndArrayDestination> ilistDest = Mapper.Map<ListAndArraySource[], IList<ListAndArrayDestination>>(sources);
+            List<ListAndArrayDestination> listDest = Mapper.Map<ListAndArraySource[], List<ListAndArrayDestination>>(sources);
+            ListAndArrayDestination[] arrayDest = Mapper.Map<ListAndArraySource[], ListAndArrayDestination[]>(sources);
+
+
+            Assert.AreEqual(sources.Length, icollectionDest.Count);
+            Assert.AreEqual(sources.Length, ilistDest.Count);
+            Assert.AreEqual(sources.Length, listDest.Count);
+            Assert.AreEqual(sources.Length, arrayDest.Length);
+
+        }
+
+
+        [TestMethod]
+        public void NestedMapping()
+        {
+            /* 
+             *  Nested objects can be mapped if the names/types match
+            */
+            
+            Mapper.CreateMap<OuterSource, OuterDest>();
+            Mapper.CreateMap<InnerSource, InnerDest>();
+            Mapper.AssertConfigurationIsValid();
+
+            var source = new OuterSource
+            {
+                Value = 5,
+                Inner = new InnerSource { OtherValue = 15 }
+            };
+
+            var dest = Mapper.Map<OuterSource, OuterDest>(source);
+
+            Assert.AreEqual(dest.Value, 5);
+            Assert.IsNotNull(dest.Inner);
+            Assert.AreEqual(dest.Inner.OtherValue, 15);
+
+
+        }
+
+
+        [TestMethod]
+        public void CustomTypeConverterTest()
+        {
+            /*
+             * Sometimes, you need to take complete control over the conversion of one type to another. 
+             * This is typically when one type looks nothing like the other, a conversion function already exists, and you would like to go from a "looser" type 
+             * to a stronger type, such as a source type of string to a destination type of Int32.
+             */
+
+            Mapper.CreateMap<string, int>().ConvertUsing(Convert.ToInt32);
+            Mapper.CreateMap<string, DateTime>().ConvertUsing(new DateTimeTypeConverter());
+            Mapper.CreateMap<string, Type>().ConvertUsing<TypeTypeConverter>();
+            Mapper.CreateMap<TypeConverterSource, TypeConverterDestination>();
+            Mapper.AssertConfigurationIsValid();
+
+            var source = new TypeConverterSource
+            {
+                Value1 = "5",
+                Value2 = "01/01/2000",
+                Value3 = "AutoMapperSamples.GlobalTypeConverters.GlobalTypeConverters+Destination"
+            };
+
+            TypeConverterDestination result = Mapper.Map<TypeConverterSource, TypeConverterDestination>(source);
+            Assert.AreEqual(result.Value1, 5);
+            Assert.AreEqual(result.Value2, Convert.ToDateTime("01/01/2000"));
+        }
+
+
+
     }
 }

@@ -115,11 +115,21 @@
     <Compile Include="Models\CalendarEvent.cs" />
     <Compile Include="Models\CalendarEventForm.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\InnerDest.cs" />
+    <Compile Include="Models\InnerSource.cs" />
+    <Compile Include="Models\ListAndArrayDestination.cs" />
+    <Compile Include="Models\ListAndArraySource.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDto.cs" />
     <Compile Include="Models\OrderLineItem.cs" />
+    <Compile Include="Models\OuterDest.cs" />
+    <Compile Include="Models\OuterSource.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\TypeConverterDestination.cs" />
+    <Compile Include="Models\TypeConverterSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DateTimeTypeConverter.cs" />
+    <Compile Include="Services\TypeTypeConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

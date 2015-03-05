@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using AutoMapper;
 using LearnAutoMapper.Models;
-
+using LearnAutoMapper.Services;
 
 
 namespace LearnAutoMapper.App_Start
@@ -26,6 +26,25 @@ namespace LearnAutoMapper.App_Start
 
 
 
+            Mapper.CreateMap<ListAndArraySource, ListAndArrayDestination>();
+
+
+            Mapper.CreateMap<OuterSource, OuterDest>();
+            Mapper.CreateMap<InnerSource, InnerDest>();
+
+            Mapper.CreateMap<string, int>().ConvertUsing(Convert.ToInt32);
+            Mapper.CreateMap<string, DateTime>().ConvertUsing(new DateTimeTypeConverter());
+            Mapper.CreateMap<string, Type>().ConvertUsing<TypeTypeConverter>();
+            Mapper.CreateMap<TypeConverterSource, TypeConverterDestination>();
+
+
+
+
+
+
+
+
+            Mapper.AssertConfigurationIsValid();
         }
 
 
