@@ -12,6 +12,13 @@ namespace LearnAutoMapperTests
         [TestMethod]
         public void FlatteningTest()
         {
+            /*
+             * When you configure a source/destination type pair in AutoMapper, the configurator attempts to match properties and methods on the source type 
+             * to properties on the destination type. 
+             * If for any property on the destination type a property, method, or a method prefixed with "Get" does not exist on the source type, 
+             * AutoMapper splits the destination member name into individual words (by PascalCase conventions).
+             */
+
             // Register the mappings for the test.  AutoMapperConfig is not used here.
             AutoMapper.Mapper.CreateMap<Order, OrderDto>();
 
@@ -40,6 +47,12 @@ namespace LearnAutoMapperTests
         [TestMethod]
         public void ProjectionTest()
         {
+            /*
+             * Projection transforms a source to a destination beyond flattening the object model. 
+             * Without extra configuration, AutoMapper requires a flattened destination to match the source type's naming structure. 
+             * When you want to project source values into a destination that does not exactly match the source structure, you must specify custom member mapping definitions.
+            */
+
             var calendarEvent = new CalendarEvent
             {
                 Date = new DateTime(2008, 12, 15, 20, 30, 0),
