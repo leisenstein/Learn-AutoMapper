@@ -119,6 +119,8 @@
     <Compile Include="Models\InnerSource.cs" />
     <Compile Include="Models\ListAndArrayDestination.cs" />
     <Compile Include="Models\ListAndArraySource.cs" />
+    <Compile Include="Models\NullSubDest.cs" />
+    <Compile Include="Models\NullSubSource.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDto.cs" />
     <Compile Include="Models\OrderLineItem.cs" />

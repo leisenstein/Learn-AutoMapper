@@ -37,7 +37,7 @@ namespace LearnAutoMapper.App_Start
             Mapper.CreateMap<string, Type>().ConvertUsing<TypeTypeConverter>();
             Mapper.CreateMap<TypeConverterSource, TypeConverterDestination>();
 
-
+            Mapper.CreateMap<NullSubSource, NullSubDest>().ForMember(dest => dest.Value, opt => opt.NullSubstitute("Other Value"));
 
 
 

@@ -165,6 +165,29 @@ namespace LearnAutoMapperTests
         }
 
 
+        [TestMethod]
+        public void NullSubstitutionTest()
+        {
+            /*
+             * Null substitution allows you to supply an alternate value for a destination member if the source value is null anywhere along the member chain.
+            */
+
+            // If Value is NULL, put in "Other Value".  Otherwise, use its Value
+            Mapper.CreateMap<NullSubSource, NullSubDest>().ForMember(dest => dest.Value, opt => opt.NullSubstitute("Other Value"));
+
+            // Test for "Other Value"
+            var source = new NullSubSource { Value = null };
+            var destination = Mapper.Map<NullSubSource, NullSubDest>(source);
+            Assert.AreEqual(destination.Value, "Other Value");
+
+
+            // Test for Normal behavior
+            source.Value = "Not null";
+            destination = Mapper.Map<NullSubSource, NullSubDest>(source);
+            Assert.AreEqual(destination.Value, "Not null");
+
+        }
+
 
     }
 }
