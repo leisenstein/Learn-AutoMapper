@@ -189,5 +189,21 @@ namespace LearnAutoMapperTests
         }
 
 
+
+        [TestMethod]
+        public void GenericMappingTest()
+        {
+            /*
+             * AutoMapper can support an open generic type map. 
+            */
+
+            Mapper.CreateMap(typeof(GenericSource<>), typeof(GenericDestination<>));
+
+            var source = new GenericSource<int> { Value = 10 };
+            var dest = Mapper.Map<GenericSource<int>, GenericDestination<int>>(source);
+
+            Assert.AreEqual(dest.Value, 10);
+        }
+
     }
 }

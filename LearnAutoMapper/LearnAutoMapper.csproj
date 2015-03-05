@@ -115,6 +115,8 @@
     <Compile Include="Models\CalendarEvent.cs" />
     <Compile Include="Models\CalendarEventForm.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\GenericDestination.cs" />
+    <Compile Include="Models\GenericSource.cs" />
     <Compile Include="Models\InnerDest.cs" />
     <Compile Include="Models\InnerSource.cs" />
     <Compile Include="Models\ListAndArrayDestination.cs" />

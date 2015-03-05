@@ -39,7 +39,7 @@ namespace LearnAutoMapper.App_Start
 
             Mapper.CreateMap<NullSubSource, NullSubDest>().ForMember(dest => dest.Value, opt => opt.NullSubstitute("Other Value"));
 
-
+            Mapper.CreateMap(typeof(GenericSource<>), typeof(GenericDestination<>));
 
 
 
